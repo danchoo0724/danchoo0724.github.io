@@ -1,0 +1,140 @@
+<html>
+<head>
+
+    <title>DON'T FORGET</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400|Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="normalize.css">
+        
+</head>
+
+<body>
+    
+    <div id = "app">
+        <div id = "topbar">
+         
+            <span>
+                Roomies
+            </span>
+            
+        </div>
+        
+        <p></p>
+        
+        <div class="container">
+           
+            <table class="table table-hover" id="sortable">
+                <thead>
+                    <tr class="showAdd">
+                        
+                        <td id='addTask' name='addTask'>
+                            <input type="text" class="txt" value="" />
+                            
+                            <input type='text' class="txtDate" id='txtDate' />
+                            <p></p>
+                            <!--Radio Buttons-->
+                            <label class="control control--radio" value="prior1" id="priorRed">Priority 1
+                              <input type="radio" name="radio" checked="checked" value="prior1"/>
+                              <div class="control__indicator1"></div>
+                            </label>
+                            
+                            <label class="control control--radio" value="prior2" id="priorOrange">Priority 2
+                              <input type="radio" name="radio" value="prior2"/>
+                              <div class="control__indicator2"></div>
+                            </label>
+                            
+                            <label class="control control--radio" value="prior3" id="priorYellow">Priority 3
+                              <input type="radio" name="radio" value="prior3"/>
+                              <div class="control__indicator3"></div>
+                            </label>
+                            <p></p>
+                            <button type="button" class="btn">Add Task</button>
+                        </td>
+                             
+                    </tr>
+                </thead>
+                
+                <tbody id='newTask' name='newTask' class='newTask'>
+                    
+                </tbody>
+                
+                <thead>
+                    <tr>
+                        <th id='subTitle1'>MY TO-DOs FOR TODAY</th>
+                    </tr>
+                </thead>
+
+                <tbody id='myTask' name='myTask' class="ui-sortable">
+                    <tr>
+                        
+                        <td style="cursor: move;" class="priority1">
+                            <label><input type="checkbox" value="" name='task'>&nbsp;Call maintenance about A/C</label>
+                            <div id='time'>10/18/2016</div>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td style="cursor: move;" class="priority2">
+                            <label><input type="checkbox" value="" name='task'>&nbsp;Empty Trash</label>
+                            <div id='time'>10/19/2016</div>
+                        </td>
+                    </tr>
+                    <td class="unsortable"></td>
+                </tbody>
+            </table>
+            
+            <table class="table table-hover" id="sortable">
+                <thead>
+                    <tr>
+                      <th id='subTitle2'>ROOMMATE'S TO-DOs FOR TODAY</th>
+                    </tr>
+                </thead>
+                
+                <tbody id='rmTask' name='rmTask' class="ui-sortable">
+                    <tr>
+                        <td style="cursor: move;" class="priority2">
+                            <label><input type="checkbox" value="" name='task'>&nbsp;Pay the house rent</label>
+                            <div id='time'>10/18/2016</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="cursor: move;" class="priority3">
+                            <label><input type="checkbox" value="" name='task'>&nbsp;Clean the dishes</label>
+                            <div id='time'>10/18/2016</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="cursor: move;" class="priority1">
+                            <label><input type="checkbox" value="" name='task'>&nbsp;Vacuum the floor</label>
+                            <div id='time'>10/20/2016</div>
+                        </td>
+                    </tr>
+                    <td class="unsortable"></td>
+                </tbody>
+               
+            <button id = "actionButton" value=""></button>
+            
+            </table>
+            
+            <div class="buttonHolder">
+                <input type='button' id='completeBtn' value='Delete Completed Task' name='task'>
+            </div>
+        </div>
+    <script src="myscript.js"></script>   
+</body>
+</html>
